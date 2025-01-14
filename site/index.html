@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta property="og:title" content="Launch a Banker! The game GooglePlay banned for Android"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://launchabanker.com"/>
+    <meta property="og:image" content="http://launchabanker.com/ogimage.png"/>
+    <meta property="og:description"
+          content="A banker-launching simulator which allows you, the player, to fire a banker out of a cannon and (hopefully) into a jail cell. Trampoline powerups allow you to stay afloat a while longer. Available online at www.launchabanker.com on your browser, or through the Apple AppStore."/>
+    <title>Launch a Banker</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script>
+        $(document).ready(function (){
+         // if(navigator.userAgent.toLowerCase().indexOf("android") > -1){
+         //     window.location.href = 'http://play.google.com/store/apps/details?id=com.truecaller&hl=en';
+         // }
+         if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1){
+             window.location.href = 'https://itunes.apple.com/us/app/launch-a-banker/id1130588593?mt=8';
+         }
+        });
+</script>
+
+  </head>
+  <body class="template">
+    <p class="header">Launch a Banker</p>
+    <div class="template-wrap clear">
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <br>
+     
+      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+
+      
+
+      <div style="color:#888; font-size:12px; width: 800px">
+      	To play: Aim the cannon with the arrow keys (or WASD) and use spacebar to fire! If you have an extra bounce, use it with the spacebar. Collect orbs for more bounces. This banker-launching simulator has been brought to you by <a href="//graysonearle.com" target="_blank">Grayson Earle</a>. Also available on the AppStore.</div>
+    </div>
+    
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/web.data",
+    codeUrl: "Release/web.js",
+    memUrl: "Release/web.mem",
+    
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+
+  </body>
+</html>
